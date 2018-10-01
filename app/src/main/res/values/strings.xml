@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FeelsBook</string>
+    <string name="love">Love</string>
+    <string name="joy">Joy</string>
+    <string name="surprise">Surprise</string>
+    <string name="anger">Anger</string>
+    <string name="sadness">Sadness</string>
+    <string name="fear">Fear</string>
+    <string name="zero">0</string>
 </resources>
