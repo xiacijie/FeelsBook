@@ -7,4 +7,7 @@
     <string name="sadness">Sadness</string>
     <string name="fear">Fear</string>
     <string name="zero">0</string>
+    <string name="counter">Counter</string>
+    <string name="comment">Comment</string>
+    <string name="create">Create New Emotion</string>
 </resources>

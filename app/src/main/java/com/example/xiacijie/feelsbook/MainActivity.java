@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getButtonElements();
-//        getCounterTextElements();
-//        bindEmotionButtonsListener();
+        getButtonElements();
+        getCounterTextElements();
+        bindEmotionButtonsListener();
 
 
 
@@ -42,28 +42,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //
-//    /** Get the counter elements from the layout */
-//    private void getCounterTextElements(){
-//
-//        emotionCounterTextList.add((TextView) findViewById(R.id.loveCount));
-//        emotionCounterTextList.add((TextView) findViewById(R.id.joyCount));
-//        emotionCounterTextList.add((TextView) findViewById(R.id.surpriseCount));
-//        emotionCounterTextList.add((TextView) findViewById(R.id.angerCount));
-//        emotionCounterTextList.add((TextView) findViewById(R.id.sadnessCount));
-//        emotionCounterTextList.add((TextView) findViewById(R.id.fearCount));
-//
-//    }
-//
-//
-//    /** Get the button elements from the layout */
-//    private void getButtonElements(){
-//
-//        buttonList.add((Button) findViewById(R.id.loveButton));
-//        buttonList.add((Button) findViewById(R.id.joyButton));
-//        buttonList.add((Button) findViewById(R.id.surpriseButton));
-//        buttonList.add((Button) findViewById(R.id.angerButton));
-//        buttonList.add((Button) findViewById(R.id.sadnessButton));
-//        buttonList.add((Button) findViewById(R.id.fearButton));
-//
-//    }
+    /** Get the counter elements from the layout */
+    private void getCounterTextElements(){
+
+        emotionCounterTextList.add((TextView) findViewById(R.id.loveCount));
+        emotionCounterTextList.add((TextView) findViewById(R.id.joyCount));
+        emotionCounterTextList.add((TextView) findViewById(R.id.surpriseCount));
+        emotionCounterTextList.add((TextView) findViewById(R.id.angerCount));
+        emotionCounterTextList.add((TextView) findViewById(R.id.sadnessCount));
+        emotionCounterTextList.add((TextView) findViewById(R.id.fearCount));
+
+    }
+
+
+    /** Get the button elements from the layout */
+    private void getButtonElements(){
+
+        buttonList.add((Button) findViewById(R.id.loveButton));
+        buttonList.add((Button) findViewById(R.id.joyButton));
+        buttonList.add((Button) findViewById(R.id.surpriseButton));
+        buttonList.add((Button) findViewById(R.id.angerButton));
+        buttonList.add((Button) findViewById(R.id.sadnessButton));
+        buttonList.add((Button) findViewById(R.id.fearButton));
+
+    }
 }
