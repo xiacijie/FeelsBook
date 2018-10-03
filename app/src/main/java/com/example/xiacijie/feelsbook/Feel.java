@@ -38,6 +38,6 @@ public class Feel {
     }
 
     public String toString(){
-        return this.emotion + "|" + this.date.toString();
+        return this.emotion + " --- " + this.date.toString();
     }
 }

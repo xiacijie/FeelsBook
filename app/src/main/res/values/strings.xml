@@ -10,4 +10,7 @@
     <string name="counter">Counter</string>
     <string name="comment">Comment</string>
     <string name="create">Create New Emotion</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
 </resources>

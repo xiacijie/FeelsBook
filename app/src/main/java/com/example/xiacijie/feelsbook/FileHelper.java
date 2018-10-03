@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 
 /** A helper class for saving file to disk and read files */
+
 public class FileHelper{
 
     /** load the file */
@@ -44,7 +45,7 @@ public class FileHelper{
     /** save the file */
     static public void saveFile(MainActivity context, String filename, ArrayList<Feel> feels){
         try {
-            Log.d("Jack","I am inside saveFile");
+
             FileOutputStream fos = context.openFileOutput(filename,0);
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             BufferedWriter writer = new BufferedWriter(osw);
