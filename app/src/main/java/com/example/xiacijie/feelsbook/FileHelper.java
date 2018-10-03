@@ -1,6 +1,7 @@
 package com.example.xiacijie.feelsbook;
 
 
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -19,12 +20,12 @@ import java.util.ArrayList;
 
 
 
-/** A helper class for saving file to disk and read files */
+/** A helper class for saving file and reading files to and from disk using GSON */
 
 public class FileHelper{
 
     /** load the file */
-    static public ArrayList<Feel> loadFile(MainActivity context, String filename){
+    static public ArrayList<Feel> loadFile(AppCompatActivity context, String filename){
         ArrayList<Feel> feels = new ArrayList<Feel>();
         try {
             FileInputStream fis = context.openFileInput(filename);
@@ -43,7 +44,7 @@ public class FileHelper{
     }
 
     /** save the file */
-    static public void saveFile(MainActivity context, String filename, ArrayList<Feel> feels){
+    static public void saveFile(AppCompatActivity context, String filename, ArrayList<Feel> feels){
         try {
 
             FileOutputStream fos = context.openFileOutput(filename,0);

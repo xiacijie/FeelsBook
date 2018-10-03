@@ -13,4 +13,7 @@
     <string name="save">Save</string>
     <string name="delete">Delete</string>
     <string name="back">Back</string>
+    <string name="editing">Editing</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
 </resources>
