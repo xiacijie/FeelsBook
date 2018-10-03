@@ -15,7 +15,7 @@
         android:layout_marginTop="8dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/love"
         app:layout_constraintEnd_toStartOf="@+id/textView29"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/anger"
         app:layout_constraintEnd_toStartOf="@+id/textView32"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView30"
@@ -101,33 +101,20 @@
         app:layout_constraintStart_toEndOf="@+id/textView32"
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView2"
-        android:layout_width="395dp"
-        android:layout_height="291dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:foregroundGravity="center_vertical|center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surpriseCount" />
-
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/create"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+        app:layout_constraintTop_toBottomOf="@+id/feelsList" />
 
     <Button
         android:id="@+id/loveButton"
@@ -337,4 +324,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadnessButton"
         app:layout_constraintVertical_bias="0.813" />
+
+    <ListView
+        android:id="@+id/feelsList"
+        android:layout_width="395dp"
+        android:layout_height="313dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:dividerHeight="5dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surpriseCount" />
+
 </android.support.constraint.ConstraintLayout>

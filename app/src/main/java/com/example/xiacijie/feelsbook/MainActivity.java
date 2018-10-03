@@ -4,8 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Button> buttonList = new ArrayList<Button>();
     private ArrayList<TextView> emotionCounterTextList = new ArrayList<TextView>();
     private EditText commentText;
+    private ArrayAdapter<Feel> adapter;
+    private ListView feelsList;
+    private ArrayList<Feel> feels = new ArrayList<Feel>();
+    private final String FILENAME = "feels.sav";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // get the elements from the layout
-
+        getListView();
         getTextElements();
         getButtonElements();
         getCounterTextElements();
@@ -35,11 +42,55 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart(){
+        super.onStart();
+        feels = FileHelper.loadFile(this,FILENAME);
+        adapter = new ArrayAdapter<Feel>(this, R.layout.list_item, feels);
+        feelsList.setAdapter(adapter);
+
+        // set the view click listener
+        feelsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("______________________",position+"");
+            }
+        });
+
+        countEmotions();
+
+    }
+
+    /** Count the number of different kinds of emotions */
+    private void countEmotions(){
+        int countArray[] = {0,0,0,0,0,0};
+        for (Feel feel : feels){
+            if (feel.getEmotion().equals("Love")) countArray[0] ++;
+            else if (feel.getEmotion().equals("Joy")) countArray[1] ++;
+            else if (feel.getEmotion().equals("Surprise")) countArray[2] ++;
+            else if (feel.getEmotion().equals("Anger")) countArray[3] ++;
+            else if (feel.getEmotion().equals("Sadness")) countArray[4] ++;
+            else if (feel.getEmotion().equals("Fear")) countArray[5] ++;
+        }
+
+        for (int i = 0 ; i < countArray.length; i ++){
+            TextView currentCountView = (TextView) emotionCounterTextList.get(i);
+            currentCountView.setText(Integer.toString(countArray[i]));
+        }
+
+    }
+
     /** Get the text elements from the layout */
     private void getTextElements(){
 
         commentText = (EditText) findViewById(R.id.commentText);
 
+    }
+
+    /** Get the listView elements from the layout */
+    private void getListView(){
+
+        feelsList = (ListView) findViewById(R.id.feelsList);
     }
 
 
@@ -65,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
         num += 1;
         currentCounter.setText(Integer.toString(num));
 
+        Feel newFeel = new Feel(buttonList.get(i).getText().toString());
+        feels.add(newFeel);
+        adapter.notifyDataSetChanged();
+
+        countEmotions();
+
+        // SAVE THE FILE
+        FileHelper.saveFile(this,FILENAME,feels);
 
 
     }

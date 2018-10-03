@@ -2,6 +2,7 @@ package com.example.xiacijie.feelsbook;
 
 import java.util.Date;
 
+/** A class for emotion object */
 public class Feel {
     private String emotion;
     private String comment;
@@ -34,5 +35,9 @@ public class Feel {
     public String getComment(){
 
         return this.comment;
+    }
+
+    public String toString(){
+        return this.emotion + "|" + this.date.toString();
     }
 }
