@@ -30,4 +30,9 @@ public class DatePickerFragment extends DialogFragment
         // Do something with the date chosen by the user
         context.updateDate(year,month,day);
     }
+
+    public void setContext(DetailActivity context){
+        this.context = context;
+    }
+
 }

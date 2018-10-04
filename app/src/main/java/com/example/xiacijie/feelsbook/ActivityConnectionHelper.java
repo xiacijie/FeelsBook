@@ -14,7 +14,7 @@ public class ActivityConnectionHelper {
         intent.putExtra(Config.ID,id);
         intent.putExtra(Config.EMOTION, feel.getEmotion());
         intent.putExtra(Config.COMMENT,feel.getComment());
-        intent.putExtra(Config.DATE,feel.getDate());
+        intent.putExtra(Config.DATE,feel.getStringDate());
         //https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android
         context.startActivityForResult(intent,1);
     }

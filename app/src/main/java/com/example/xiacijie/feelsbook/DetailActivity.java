@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Currency;
+import java.util.Date;
+
 /** This is the activity for showing details and editing details*/
 public class DetailActivity extends AppCompatActivity {
 
@@ -26,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
     private TextView dateText;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +41,9 @@ public class DetailActivity extends AppCompatActivity {
         commentText.setText(getIntent().getStringExtra(Config.COMMENT));
         dateText.setText(getIntent().getStringExtra(Config.DATE));
 
-
-
-
     }
 
+    /** get the elements from the layout */
     private void getElements(){
         cancelButton = (Button) findViewById(R.id.cancelButton);
         saveButton =  (Button) findViewById(R.id.saveButton);
@@ -54,6 +56,9 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+
+
+    /** bind the event listeners for elements */
     private void bindEventListener(){
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DialogFragment newFragment = new DatePickerFragment();
-
+                ((DatePickerFragment) newFragment).setContext(DetailActivity.this);
                 newFragment.show(getSupportFragmentManager(), "datePicker");
 
             }
@@ -103,13 +108,18 @@ public class DetailActivity extends AppCompatActivity {
 
     /** To update the date */
     public void updateTime(int hour,int minute){
-        Log.d("------HOUR",hour+"");
-        Log.d("_____MINUTE",minute+"");
+        String currentDateString = dateText.getText().toString();
+        String newDateString = currentDateString.substring(0,11) + String.format("%02d",hour) +":" +String.format("%02d",minute) +":00";
+        dateText.setText(newDateString);
 
     }
 
     /** To update the time */
     public void updateDate(int year, int month, int day){
+        Log.d("mmmmmmmmmmmm",month+"");
+        String currentDateString = dateText.getText().toString();
+        String newDateString = String.format("%04d",year) +"-" + String.format("%02d",month+1) +"-" + String.format("%02d",day) + currentDateString.substring(10,19);
+        dateText.setText(newDateString);
 
 
     }
@@ -125,6 +135,7 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra(Config.ID,getIntent().getIntExtra(Config.ID, 0));
         intent.putExtra(Config.COMMENT,commentText.getText().toString());
+        intent.putExtra(Config.DATE,dateText.getText().toString());
         ActivityConnectionHelper.save(this,intent);
     }
 

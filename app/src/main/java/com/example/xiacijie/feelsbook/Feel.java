@@ -1,10 +1,5 @@
 package com.example.xiacijie.feelsbook;
 
-import android.text.format.DateFormat;
-
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /** A class for emotion object */
@@ -27,12 +22,18 @@ public class Feel {
         return this.emotion;
     }
 
-    public String getDate(){
+    public String getStringDate(){
 
-//        https://stackoverflow.com/questions/5683728/convert-java-util-date-to-string
-        Format formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        String s = formatter.format(this.date);
-        return s;
+
+        return DateStringHelper.dateToString(this.date);
+    }
+
+    public Date getRawDate(){
+        return this.date;
+    }
+
+    public void setDate(String s){
+        this.date = DateStringHelper.stringToDate(s);
     }
 
     public String getComment(){
@@ -45,6 +46,6 @@ public class Feel {
     }
 
     public String toString(){
-        return this.emotion + " --- " + this.getDate();
+        return this.emotion + " --- " + this.getStringDate();
     }
 }

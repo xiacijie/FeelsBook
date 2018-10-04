@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         //bind the listener
         bindListener();
+
+
 
     }
 
@@ -65,26 +68,36 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (requestCode == 1) {
+            // if it is a delete action
             if(resultCode == Config.DELETE) {
                 int id = intent.getIntExtra(Config.ID,0);
                 feels.remove(id);
-                updateState();
+
 
             }
+            // if it is a update action
             else if (resultCode == Config.UPDATE){
                 String newComment = intent.getStringExtra(Config.COMMENT);
                 int id = intent.getIntExtra(Config.ID,0);
                 feels.get(id).setComment(newComment);
-                updateState();
+                feels.get(id).setDate(intent.getStringExtra(Config.DATE));
+
 
             }
+            updateState();
         }
+    }
+
+    /** sort the emotion lists based on date */
+    private void sortEmotion(){
+        Collections.sort(feels,new ObjectSortHelper());
     }
 
     /** Update the state when there is change */
     private void updateState(){
         countEmotions();
         commentText.setText("");
+        sortEmotion();
         adapter.notifyDataSetChanged();
         FileHelper.saveFile(this,Config.FILENAME,feels);
     }
@@ -148,9 +161,6 @@ public class MainActivity extends AppCompatActivity {
         feels.add(newFeel);
 
         updateState();
-
-
-
 
     }
 
