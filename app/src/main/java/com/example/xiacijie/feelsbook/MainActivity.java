@@ -106,12 +106,7 @@ public class MainActivity extends AppCompatActivity {
     private void countEmotions(){
         int countArray[] = {0,0,0,0,0,0};
         for (Feel feel : feels){
-            if (feel.getEmotion().equals("Love")) countArray[0] ++;
-            else if (feel.getEmotion().equals("Joy")) countArray[1] ++;
-            else if (feel.getEmotion().equals("Surprise")) countArray[2] ++;
-            else if (feel.getEmotion().equals("Anger")) countArray[3] ++;
-            else if (feel.getEmotion().equals("Sadness")) countArray[4] ++;
-            else if (feel.getEmotion().equals("Fear")) countArray[5] ++;
+           countArray[Config.emotionHash.get(feel.getEmotion())] ++;
         }
 
         for (int i = 0 ; i < countArray.length; i ++){
