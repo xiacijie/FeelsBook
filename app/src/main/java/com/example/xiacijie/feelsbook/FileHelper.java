@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /** A helper class for saving file and reading files to and from disk using GSON */
 
 public class FileHelper{
-
+    //https://github.com/xiacijie/lonelyTwitter/blob/master/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java
     /** load the file */
     static public ArrayList<Feel> loadFile(AppCompatActivity context, String filename){
         ArrayList<Feel> feels = new ArrayList<Feel>();

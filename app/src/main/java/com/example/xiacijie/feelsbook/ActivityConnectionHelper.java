@@ -12,10 +12,14 @@ public class ActivityConnectionHelper {
     static public void switchToActivity(AppCompatActivity context, Class Destination, int id,Feel feel){
         Intent intent = new Intent(context,Destination);
         intent.putExtra(Config.ID,id);
+        intent.putExtra(Config.EMOTION, feel.getEmotion());
+        intent.putExtra(Config.COMMENT,feel.getComment());
+        intent.putExtra(Config.DATE,feel.getDate());
+        //https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android
         context.startActivityForResult(intent,1);
     }
 
-    /** go back */
+    /** go back to the previous activity*/
     static public void goBack(AppCompatActivity context){
 
         context.finish();

@@ -14,6 +14,6 @@
     <string name="delete">Delete</string>
     <string name="back">Back</string>
     <string name="editing">Editing</string>
-    <string name="date">Date</string>
-    <string name="time">Time</string>
+    <string name="date">ChangeDate</string>
+    <string name="time">ChangeTime</string>
 </resources>

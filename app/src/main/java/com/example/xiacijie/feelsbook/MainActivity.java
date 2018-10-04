@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
         //bind the listener
         bindListener();
 
-
-
     }
 
     @Override
@@ -48,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onStart();
         feels = FileHelper.loadFile(this,Config.FILENAME);
+        //https://developer.android.com/guide/topics/ui/declaring-layout#java
         adapter = new ArrayAdapter<Feel>(this, R.layout.list_item, feels);
         feelsList.setAdapter(adapter);
 
@@ -73,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else if (resultCode == Config.UPDATE){
-                Log.d("*************action","UPDATE");
+                String newComment = intent.getStringExtra(Config.COMMENT);
+                int id = intent.getIntExtra(Config.ID,0);
+                feels.get(id).setComment(newComment);
+                updateState();
+
             }
         }
     }
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
     /** Update the state when there is change */
     private void updateState(){
         countEmotions();
+        commentText.setText("");
         adapter.notifyDataSetChanged();
         FileHelper.saveFile(this,Config.FILENAME,feels);
     }
@@ -132,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** The event happens when the user clicks the emotion button */
+    /** The event happens when the user clicks the emotion button,add a new emotion */
     private void emotionClickHandler( int i){
         TextView currentCounter = (TextView) emotionCounterTextList.get(i);
         String number = currentCounter.getText().toString();
@@ -140,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         num += 1;
         currentCounter.setText(Integer.toString(num));
 
-        Feel newFeel = new Feel(buttonList.get(i).getText().toString());
+        Feel newFeel = new Feel(buttonList.get(i).getText().toString(), commentText.getText().toString());
         feels.add(newFeel);
 
         updateState();

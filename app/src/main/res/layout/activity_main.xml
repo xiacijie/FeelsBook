@@ -12,14 +12,14 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
         android:text="@string/love"
         app:layout_constraintEnd_toStartOf="@+id/textView29"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/love" />
 
     <TextView
@@ -28,14 +28,14 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
         android:text="@string/joy"
         app:layout_constraintEnd_toStartOf="@+id/textView30"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView30"
@@ -43,14 +43,14 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
         android:text="@string/surprise"
         app:layout_constraintEnd_toStartOf="@+id/textView31"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/surprise" />
 
     <TextView
@@ -59,14 +59,14 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
         android:text="@string/anger"
         app:layout_constraintEnd_toStartOf="@+id/textView32"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toBottomOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/anger" />
 
     <TextView
@@ -75,14 +75,14 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center"
         android:text="@string/sadness"
         app:layout_constraintEnd_toStartOf="@+id/textView34"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView34"
@@ -90,7 +90,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:foregroundGravity="center_vertical|center_horizontal"
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView32"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView35"
@@ -107,12 +107,12 @@
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/create"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feelsList" />
 
@@ -290,24 +290,10 @@
         app:layout_constraintStart_toEndOf="@+id/loveCount"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/counter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/commentText"
         android:layout_width="347dp"
-        android:layout_height="44dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -320,15 +306,14 @@
         android:maxLength="1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadnessButton"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/feelsList"
-        android:layout_width="395dp"
-        android:layout_height="313dp"
+        android:layout_width="0dp"
+        android:layout_height="292dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"

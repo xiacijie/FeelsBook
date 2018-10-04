@@ -12,6 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan">
+            <!--https://stackoverflow.com/questions/24262414/android-keyboard-hides-edittext-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
