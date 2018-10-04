@@ -3,7 +3,6 @@ package com.example.xiacijie.feelsbook;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
 
         super.onStart();
-        feels = FileHelper.loadFile(this,Config.FILENAME);
+        feels = FileUtil.loadFile(this,Config.FILENAME);
         //https://developer.android.com/guide/topics/ui/declaring-layout#java
         adapter = new ArrayAdapter<Feel>(this, R.layout.list_item, feels);
         feelsList.setAdapter(adapter);
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         feelsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ActivityConnectionHelper.switchToActivity(MainActivity.this,DetailActivity.class,position,feels.get(position));
+                ActivityConnectionUtil.switchToActivity(MainActivity.this,DetailActivity.class,position,feels.get(position));
             }
         });
 
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** sort the emotion lists based on date */
     private void sortEmotion(){
-        Collections.sort(feels,new ObjectSortHelper());
+        Collections.sort(feels,new ObjectSortUtil());
     }
 
     /** Update the state when there is change */
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         commentText.setText("");
         sortEmotion();
         adapter.notifyDataSetChanged();
-        FileHelper.saveFile(this,Config.FILENAME,feels);
+        FileUtil.saveFile(this,Config.FILENAME,feels);
     }
 
     /** Count the number of different kinds of emotions */

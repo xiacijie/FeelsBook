@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 
 /** This is a helper class that jumps between activities and sending data between activities */
-public class ActivityConnectionHelper {
+public class ActivityConnectionUtil {
 
 
     /** go to anthoer activity */

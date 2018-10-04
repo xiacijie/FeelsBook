@@ -25,7 +25,7 @@ public class Feel {
     public String getStringDate(){
 
 
-        return DateStringHelper.dateToString(this.date);
+        return DateStringUtil.dateToString(this.date);
     }
 
     public Date getRawDate(){
@@ -33,7 +33,7 @@ public class Feel {
     }
 
     public void setDate(String s){
-        this.date = DateStringHelper.stringToDate(s);
+        this.date = DateStringUtil.stringToDate(s);
     }
 
     public String getComment(){

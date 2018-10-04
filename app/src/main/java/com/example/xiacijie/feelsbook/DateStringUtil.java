@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /** A helper class that convert date to string and convert string to date */
-public class DateStringHelper {
+public class DateStringUtil {
     static public String dateToString(Date date){
         //https://stackoverflow.com/questions/5683728/convert-java-util-date-to-string
         Format formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");

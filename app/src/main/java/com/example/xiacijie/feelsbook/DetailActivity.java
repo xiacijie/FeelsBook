@@ -8,13 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.Currency;
-import java.util.Date;
 
 /** This is the activity for showing details and editing details*/
 public class DetailActivity extends AppCompatActivity {
@@ -127,7 +121,7 @@ public class DetailActivity extends AppCompatActivity {
 
     /** Go back to the previous activity */
     private void goBack(){
-        ActivityConnectionHelper.goBack(this);
+        ActivityConnectionUtil.goBack(this);
     }
 
     /** Save the result and go back */
@@ -136,13 +130,13 @@ public class DetailActivity extends AppCompatActivity {
         intent.putExtra(Config.ID,getIntent().getIntExtra(Config.ID, 0));
         intent.putExtra(Config.COMMENT,commentText.getText().toString());
         intent.putExtra(Config.DATE,dateText.getText().toString());
-        ActivityConnectionHelper.save(this,intent);
+        ActivityConnectionUtil.save(this,intent);
     }
 
     /** Delete the current emotion */
     private void delete(){
         Intent intent = new Intent();
         intent.putExtra(Config.ID,getIntent().getIntExtra(Config.ID,0));
-        ActivityConnectionHelper.delete(this,intent);
+        ActivityConnectionUtil.delete(this,intent);
     }
 }
