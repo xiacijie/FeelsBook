@@ -345,7 +345,7 @@
         android:ems="10"
         android:hint="@string/comment"
         android:inputType="textMultiLine"
-        android:maxLength="1000"
+        android:maxLength="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -60,6 +60,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="textMultiLine"
+        android:maxLength="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
