@@ -31,38 +31,40 @@ Youtube demo: https://youtu.be/pOXee24jJvg
     #For any non-text media, you agree to comply with whatever license under which the work has been made available (which can be discovered by clicking on the work and looking at the licensing section on its description page or reviewing an applicable source page for that work). When re-using any content that we host, you agree to comply with the relevant attribution requirements as they pertain to the underlying license or licenses.
     #Modifications or additions to material that you re-use: When modifying or making additions to text that you have obtained from a Project website, you agree to license the modified or added content under CC BY-SA 4.0 or later (or, as explained above, another license when exceptionally required by the specific Project edition or feature). When modifying or making additions to any non-text media that you have obtained from a Project website, you agree to license the modified or added content in accordance with whatever license under which the work has been made available. With both text content and non-text media, you agree to clearly indicate that the original work has been modified. If you are re-using text content in a wiki, it is sufficient to indicate in the page history that you made a change to the imported text. For each copy or modified version that you distribute, you agree to include a licensing notice stating which license the work is released under, along with either a hyperlink or URL to the text of the license or a copy of the license itself.
     
-    a. Issue of keyboard hides the editText
-    URL:https://stackoverflow.com/questions/24262414/android-keyboard-hides-edittext
-    Author: kishan_dhamat
-    Date of publication: Jun 17 '14 at 11:22
-    License: CC BY-SA 4.0
+a. Issue of keyboard hides the editText
+URL:https://stackoverflow.com/questions/24262414/android-keyboard-hides-edittext
+Author: kishan_dhamat
+Date of publication: Jun 17 '14 at 11:22
+License: CC BY-SA 4.0
 
 
-    b. send result back to activity 1
-    URL: https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android
-    Author: ρяσѕρєя K
-    Date of publication: Jan 12 '13 at 10:32
-    License: CC BY-SA 4.0
+b. send result back to activity 1
+URL: https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android
+Author: ρяσѕρєя K
+Date of publication: Jan 12 '13 at 10:32
+License: CC BY-SA 4.0
 
 
-    c. convert date into format string
-    URL: https://stackoverflow.com/questions/5683728/convert-java-util-date-to-string
-    Author : alibenmessaoud
-    Date of publication: Apr 16 '11 at 1:04
-    License: CC BY-SA 4.0
-
-
-
-    d.convert string into date object
-    URL :https://stackoverflow.com/questions/6510724/how-to-convert-java-string-to-date-object
-    Author: user755043
-    Date of publication: Jun 28 '11 at 17:37
-    License: CC BY-SA 4.0
+c. convert date into format string
+URL: https://stackoverflow.com/questions/5683728/convert-java-util-date-to-string
+Author : alibenmessaoud
+Date of publication: Apr 16 '11 at 1:04
+License: CC BY-SA 4.0
 
 
 
+d.convert string into date object
+URL :https://stackoverflow.com/questions/6510724/how-to-convert-java-string-to-date-object
+Author: user755043
+Date of publication: Jun 28 '11 at 17:37
+License: CC BY-SA 4.0
 
-
+e. sort the object by property
+URL: https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
+Author：Michael Myers
+Date of publication:  May 6 '10 at 21:18
+Lisence: CC BY-SA 4.0
+    
 
 2.ArrayAdapter
 URL: https://developer.android.com/guide/topics/ui/declaring-layout#java
