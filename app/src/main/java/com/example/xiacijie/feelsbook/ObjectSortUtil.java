@@ -3,7 +3,8 @@ package com.example.xiacijie.feelsbook;
 
 import java.util.Comparator;
 
-/** a helper class that do the object sorting */
+/** a helper class
+ * that do the object sorting */
 public class ObjectSortUtil implements Comparator<Feel> {
 //    https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
     @Override

@@ -14,6 +14,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
+/** This is an activity class that holds all the necessary methods nad attributes for
+ * the main page
+ */
 public class MainActivity extends AppCompatActivity {
 
 

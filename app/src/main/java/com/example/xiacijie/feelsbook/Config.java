@@ -2,6 +2,7 @@ package com.example.xiacijie.feelsbook;
 
 import java.util.HashMap;
 
+/** A configuration class for storing all constant variables*/
 public class Config {
     public static final int DELETE = 100;
     public static final int UPDATE = 200;

@@ -8,7 +8,8 @@ import android.widget.DatePicker;
 
 import java.util.Calendar;
 
-/** For picking the time */
+/** A fragment
+ * for picking the time */
 //https://developer.android.com/guide/topics/ui/controls/pickers
 public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {

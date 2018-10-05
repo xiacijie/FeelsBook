@@ -20,7 +20,8 @@ import java.util.ArrayList;
 
 
 
-/** A helper class for saving file and reading files to and from disk using GSON */
+/** A helper class for saving file and reading files
+ * to and from disk using GSON */
 
 public class FileUtil {
     //https://github.com/xiacijie/lonelyTwitter/blob/master/app/src/main/java/ca/ualberta/cs/lonelytwitter/LonelyTwitterActivity.java

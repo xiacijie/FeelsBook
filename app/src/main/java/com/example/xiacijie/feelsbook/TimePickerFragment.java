@@ -13,7 +13,8 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 //https://developer.android.com/guide/topics/ui/controls/pickers
-/** For pick the time */
+/** A fragment
+ * for picking the time */
 public  class TimePickerFragment extends DialogFragment
         implements TimePickerDialog.OnTimeSetListener {
 

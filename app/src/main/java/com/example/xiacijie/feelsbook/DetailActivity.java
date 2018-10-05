@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/** This is the activity for showing details and editing details*/
+/** This is the activity for showing details
+ * and editing ,saving and deleting details*/
 public class DetailActivity extends AppCompatActivity {
 
     private Button cancelButton;
