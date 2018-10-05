@@ -56,13 +56,19 @@ public class MainActivity extends AppCompatActivity {
         feelsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ActivityConnectionUtil.switchToActivity(MainActivity.this,DetailActivity.class,position,feels.get(position));
+                showDetailPage(position);
             }
         });
 
         updateState();
 
     }
+
+    /** Show detail page */
+    private void showDetailPage(int id){
+        ActivityConnectionUtil.switchToActivity(MainActivity.this,DetailActivity.class,id,feels.get(id));
+    }
+
     /** process the data sent back from detailActivity */
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
@@ -137,14 +143,14 @@ public class MainActivity extends AppCompatActivity {
             currentButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    emotionClickHandler(j);
+                    createEmotion(j);
                 }
             });
         }
     }
 
     /** The event happens when the user clicks the emotion button,add a new emotion */
-    private void emotionClickHandler( int i){
+    private void createEmotion(int i){
         TextView currentCounter = (TextView) emotionCounterTextList.get(i);
         String number = currentCounter.getText().toString();
         int num =  Integer.parseInt(number);
